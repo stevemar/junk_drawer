@@ -2,7 +2,12 @@
 # the first arg is the org name
 # the second arg is the repo name, which will be used for the new repo as well
 
-echo "remember to create the repo at https://github.com/ibm before running this"
+read -p "Did you forget to move the repo? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ ! $REPLY =~ ^[Yn]$ ]]
+then
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
+fi
 
 org=$1
 repo=$2
@@ -12,13 +17,10 @@ git clone git@github.ibm.com:$1/$2.git
 cd $2
 
 ## rename the origin branch to something else to avoid conflicts
-git remote rename origin deleteme
+git remote rename origin destination
 
 ## go to github and create an empty repo, add the new repo location
 git remote add origin https://github.com/IBM/$2.git
-
-## remove the old one
-git remote remove deleteme
 
 ## push code up to new remote branch
 git push -u origin master
