@@ -2,7 +2,7 @@
 # the first arg is the org name
 # the second arg is the repo name, which will be used for the new repo as well
 
-read -p "Did you forget to move the repo? " -n 1 -r
+read -p "Did you forget to create the repo on github.com/IBM? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yn]$ ]]
 then
