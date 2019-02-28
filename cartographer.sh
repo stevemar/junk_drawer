@@ -6,7 +6,7 @@
 # sudo apt-get install -y oracle-java8-set-default
 # export GH_TOKEN=...
 # pip install flake8 html5validator j2cli[yaml] yamllint pyyaml
-# git config --global user.email "con@ibm.com"
+# git config --global user.email "cron@ibm.com"
 # git config --global user.name "Cron VM"
 # Run crontab -e to setup cron job
 # 10 * * * * /root/cartographer.sh
