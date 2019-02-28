@@ -42,3 +42,4 @@ else
     git add *.html
     git commit --message "Update data via cron job"
     git push upstream HEAD:master
+fi
