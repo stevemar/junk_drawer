@@ -2,8 +2,8 @@
 
 # sudo add-apt-repository ppa:webupd8team/java
 # sudo apt-get update
-# sudo apt-get install python-pip
-# sudo apt-get install oracle-java8-set-default
+# sudo apt-get install -y python-pip
+# sudo apt-get install -y oracle-java8-set-default
 # export GH_TOKEN=...
 # pip install flake8 html5validator j2cli[yaml] yamllint pyyaml
 # git config --global user.email "con@ibm.com"
