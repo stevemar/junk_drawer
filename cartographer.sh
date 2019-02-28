@@ -12,6 +12,7 @@
 # 10 * * * * /root/cartographer.sh
 
 # Clone the repo and setup upstream so we can push HEAD:master
+rm -rf cartographer
 git clone https://${GH_TOKEN}@github.ibm.com/stevemar/cartographer.git cartographer
 cd cartographer
 git remote add upstream https://${GH_TOKEN}@github.ibm.com/stevemar/cartographer.git
