@@ -4,13 +4,16 @@
 # sudo apt-get update
 # sudo apt-get install -y python-pip
 # sudo apt-get install -y oracle-java8-set-default
-# export GH_TOKEN=...
 # pip install flake8 html5validator j2cli[yaml] yamllint pyyaml
 # git config --global user.email "cron@ibm.com"
 # git config --global user.name "Cron VM"
+# echo "GH_TOKEN=AAA...BBB" > /root/.bash_profile
 # Run crontab -e to setup cron job
 # 10 * * * * /root/cartographer.sh
 
+# script starts now ...
+
+source /root/.bash_profile
 # Clone the repo and setup upstream so we can push HEAD:master
 rm -rf cartographer
 git clone https://${GH_TOKEN}@github.ibm.com/stevemar/cartographer.git cartographer
