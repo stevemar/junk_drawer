@@ -7,16 +7,15 @@
 # pip install flake8 html5validator j2cli[yaml] yamllint pyyaml
 # git config --global user.email "cron@ibm.com"
 # git config --global user.name "Cron VM"
-# echo "export GH_TOKEN=AAA...BBB" > /root/.bash_profile
 # Run crontab -e to setup cron job
 # 0 * * * * /root/cartographer.sh >> /root/cartographer.log 2>&1
 
 # script starts now ...
 
 # setup and clean up
-source /root/.bash_profile
+GH_TOKEN=0c52...9356
 rm -rf cartographer/
-rm -rf cartographer.log
+#rm -rf cartographer.log
 
 # Clone the repo and setup upstream so we can push HEAD:master
 git clone https://${GH_TOKEN}@github.ibm.com/stevemar/cartographer.git cartographer
