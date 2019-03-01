@@ -7,7 +7,7 @@
 # pip install flake8 html5validator j2cli[yaml] yamllint pyyaml
 # git config --global user.email "cron@ibm.com"
 # git config --global user.name "Cron VM"
-# echo "GH_TOKEN=AAA...BBB" > /root/.bash_profile
+# echo "export GH_TOKEN=AAA...BBB" > /root/.bash_profile
 # Run crontab -e to setup cron job
 # 0 * * * * /root/cartographer.sh >> /root/cartographer.log 2>&1
 
