@@ -9,13 +9,16 @@
 # git config --global user.name "Cron VM"
 # echo "GH_TOKEN=AAA...BBB" > /root/.bash_profile
 # Run crontab -e to setup cron job
-# 10 * * * * /root/cartographer.sh
+# 0 * * * * /root/cartographer.sh >> /root/cartographer.log 2>&1
 
 # script starts now ...
 
+# setup and clean up
 source /root/.bash_profile
+rm -rf cartographer/
+rm -rf cartographer.log
+
 # Clone the repo and setup upstream so we can push HEAD:master
-rm -rf cartographer
 git clone https://${GH_TOKEN}@github.ibm.com/stevemar/cartographer.git cartographer
 cd cartographer
 git remote add upstream https://${GH_TOKEN}@github.ibm.com/stevemar/cartographer.git
