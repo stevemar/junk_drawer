@@ -16,7 +16,7 @@
 # setup and clean up
 GH_TOKEN=0c523...af9356
 rm -rf cartographer/
-#rm -rf cartographer.log
+rm -rf cartographer.log
 
 # Clone the repo and setup upstream so we can push HEAD:master
 git clone https://${GH_TOKEN}@github.ibm.com/stevemar/cartographer.git cartographer
